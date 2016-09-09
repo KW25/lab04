@@ -29,8 +29,13 @@ public class TicketMachine
         balance = 0;
         total = 0;
     }
-
-    /**
+	
+	public void showPrice() 
+	{
+		
+		System.out.println ("The price of a ticket is " + price + "cents");		
+	}
+	/**
      * Return the price of a ticket.
      */
     public int getPrice()
@@ -55,6 +60,18 @@ public class TicketMachine
         balance = balance + amount;
     }
 
+	public void setPrice(int cost)
+	{
+		if (cost < 0)
+		{
+			System.out.println ("print error message");
+		}
+		else{
+			price = cost;
+		}
+		
+	}
+	
     /**
      * Print a ticket.
      * Update the total collected and
